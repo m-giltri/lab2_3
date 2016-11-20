@@ -960,4 +960,40 @@ public class Assert {
         if (comparator.compare(o1, o2) <= 0)
             fail();
     }
+    
+    public static void assertGreaterThan(int i1, int i2) {
+        if (i1 <= i2)
+            fail();
+    }
+    
+    public static void assertGreaterThan(byte b1, byte b2) {
+        if (b1 <= b2)
+            fail();
+    }
+    
+    public static void assertGreaterThan(double d1, double d2) {
+        if (d1 <= d2)
+            fail();
+    }
+    
+    public static void assertGreaterThan(float f1, float f2) {
+        if (f1 <= f2)
+            fail();
+    }
+    
+    public static void assertGreaterThan(short s1, short s2) {
+        if (s1 <= s2)
+            fail();
+    }
+    
+    public static void assertGreaterThan(long l1, long l2) {
+        if (l1 <= l2)
+            fail();
+    }
+    
+    public static void assertGreaterThan(char c1, char c2) {
+        if (c1 <= c2)
+            fail();
+    }
+    
 }

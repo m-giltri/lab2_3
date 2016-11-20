@@ -660,4 +660,16 @@ public class AssertionTest {
         
         Assert.assertGreaterThan("a1", "a2", strComp);
     }
+    
+    @Test
+    public void greaterThanPrimitivesTesting() {
+        Assert.assertGreaterThan(2, 1);
+        Assert.assertGreaterThan('s', 'a');
+        Assert.assertGreaterThan(15.0d, 10.0d);
+        Assert.assertGreaterThan(15.0f, 10.0f);
+        Assert.assertGreaterThan(5, 2);
+        Assert.assertGreaterThan(1200L, 1000L);
+        Assert.assertGreaterThan(200, 20);
+    }
+    
 }
