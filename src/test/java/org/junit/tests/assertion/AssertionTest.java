@@ -14,6 +14,7 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.math.BigDecimal;
+import java.util.Comparator;
 
 import org.junit.Assert;
 import org.junit.ComparisonFailure;
@@ -647,5 +648,16 @@ public class AssertionTest {
     @Test(expected = AssertionError.class)
     public void assertNotEqualsIgnoresFloatDeltaOnNaN() {
         assertNotEquals(Float.NaN, Float.NaN, 1f);
+    }
+    
+    @Test
+    public void greaterThanTesting() {
+        Comparator strComp = new Comparator<String>() {
+            public int compare (String s1, String s2) {
+                return s1.compareTo(s2);
+            }
+        };
+        
+        Assert.assertGreaterThan("a1", "a2", strComp);
     }
 }
